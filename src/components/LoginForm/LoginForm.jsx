@@ -1,7 +1,7 @@
 import { Formik, Form, Field } from "formik";
 import { useDispatch } from "react-redux";
 import { toast } from "react-hot-toast";
-//import { logIn } from "../../redux/auth/operations";
+import { logIn } from "../../redux/auth/operations";
 import css from "./LoginForm.module.css";
 
 export default function LoginForm() {
@@ -11,7 +11,6 @@ export default function LoginForm() {
     dispatch(logIn(values))
       .unwrap()
       .then(reponse => {
-        console.log(reponse);
         toast.success("Success!!!");
       })
       .catch(error => {
