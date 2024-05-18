@@ -7,6 +7,7 @@ import SearchBox from "../SearchBox/SearchBox";
 import ContactList from "../ContactList/ContactList";
 
 import { fetchContacts } from '../../redux/contacts/oprations';
+import { refreshUser } from "../../redux/auth/operations";
 import { selectIsRefreshing } from "../../redux/auth/selectors";
 import { useDispatch, useSelector } from "react-redux";
 import { Route, Routes } from "react-router-dom";
@@ -26,11 +27,11 @@ export default function App() {
 
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(fetchContacts())
+    dispatch(refreshUser())
   }, [dispatch]);
   
-  const isLoading = useSelector(state => state.contacts.loading);
-  const isError = useSelector(state => state.contacts.error);
+  // const isLoading = useSelector(state => state.contacts.loading);
+  // const isError = useSelector(state => state.contacts.error); - селектори
 
   return isRefreshing ? (
     <p>Refreshing user please wait...</p>
