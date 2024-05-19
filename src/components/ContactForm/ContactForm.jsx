@@ -5,7 +5,7 @@ import * as Yup from "yup";
 import { toast } from "react-hot-toast";
 
 import { useId } from "react";
-import { addContact } from "../../redux/contacts/oprations";
+import { addContact } from "../../redux/contacts/operations";
 import { useDispatch } from "react-redux";
 
 import css from "./ContactForm.module.css";

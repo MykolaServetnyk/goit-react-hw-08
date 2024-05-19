@@ -1,7 +1,7 @@
 import { FaUser } from "react-icons/fa6";
 import { FaPhone } from "react-icons/fa6";
 import { useDispatch } from "react-redux";
-import { deleteContact } from "../../redux/contacts/oprations";
+import { deleteContact } from "../../redux/contacts/operations";
 import Button from '@mui/material/Button';
 import { MdDelete } from "react-icons/md";
 

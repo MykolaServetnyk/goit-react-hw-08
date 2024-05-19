@@ -6,7 +6,7 @@ import ContactForm from "../../components/ContactForm/ContactForm";
 import SearchBox from "../../components/SearchBox/SearchBox";
 import Error from "../../components/Error/Error";
 import Loader from '../../components/Loader/Loader';
-import { fetchContacts } from "../../redux/contacts/oprations";
+import { fetchContacts } from "../../redux/contacts/operations";
 import { selectError, selectLoading } from "../../redux/contacts/selectors";
 
 
