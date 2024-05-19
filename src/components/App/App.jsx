@@ -1,12 +1,4 @@
 import Layout from '../Layout/Layout';
-
-import Loader from '../Loader/Loader';
-import Error from '../Error/Error'
-import ContactForm from "../ContactForm/ContactForm";
-import SearchBox from "../SearchBox/SearchBox";
-import ContactList from "../ContactList/ContactList";
-
-import { fetchContacts } from '../../redux/contacts/oprations';
 import { refreshUser } from "../../redux/auth/operations";
 import { selectIsRefreshing } from "../../redux/auth/selectors";
 import { useDispatch, useSelector } from "react-redux";
@@ -29,9 +21,6 @@ export default function App() {
   useEffect(() => {
     dispatch(refreshUser())
   }, [dispatch]);
-  
-  // const isLoading = useSelector(state => state.contacts.loading);
-  // const isError = useSelector(state => state.contacts.error); - селектори
 
   return isRefreshing ? (
     <p>Refreshing user please wait...</p>
