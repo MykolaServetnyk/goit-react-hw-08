@@ -8,6 +8,7 @@
 .contactInfo {
     display: flex;
     flex-direction: column;
+    margin-right: 10px;
 }
 
 .contactItem {
@@ -16,7 +17,4 @@
 
 .deleteBtn {
     margin-left: 10px;
-    line-height: 1;
-    padding: 6px 12px;
-    border: 1px solid black;
 }

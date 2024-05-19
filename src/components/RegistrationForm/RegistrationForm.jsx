@@ -1,6 +1,8 @@
 import { Formik, Form, Field } from "formik";
 import { useDispatch } from "react-redux";
 import { register } from "../../redux/auth/operations";
+import Button from '@mui/material/Button';
+import { IoCreate } from "react-icons/io5";
 import css from "./RegistrationForm.module.css";
 
 export default function RegistrationForm() {
@@ -21,20 +23,22 @@ export default function RegistrationForm() {
       }}
       onSubmit={handleSubmit}
     >
-      <Form className={css.form} autoComplete="off">
-        <label className={css.label}>
-          Username
+      <Form className={css.container} autoComplete="off">
+        <div className={css.inputContainer}>
+          <label className={css.label}>Username</label>
           <Field type="text" name="name" />
-        </label>
-        <label className={css.label}>
-          Email
+        </div>
+        <div className={css.inputContainer}>
+          <label className={css.label}>Email</label>
           <Field type="email" name="email" />
-        </label>
-        <label className={css.label}>
-          Password
+        </div>
+        <div className={css.inputContainer}>
+          <label className={css.label}>Password</label>
           <Field type="password" name="password" />
-        </label>
-        <button type="submit">Register</button>
+        </div>
+        <Button variant="contained" endIcon={<IoCreate />} type='submit'>
+          Create account
+        </Button>
       </Form>
     </Formik>
   );

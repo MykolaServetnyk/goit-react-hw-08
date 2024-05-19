@@ -1,6 +1,8 @@
 import { useDispatch, useSelector } from "react-redux";
 import { selectUser } from "../../redux/auth/selectors";
 import { logOut } from "../../redux/auth/operations";
+import Button from '@mui/material/Button';
+import { MdOutlineLogout } from "react-icons/md";
 import css from "./UserMenu.module.css";
 
 export default function UserMenu() {
@@ -14,9 +16,9 @@ export default function UserMenu() {
   return (
     <div className={css.wrapper}>
       <p className={css.username}>Welcome, {user.name}</p>
-      <button type="button" onClick={handleLogout}>
+      <Button variant="contained" endIcon={<MdOutlineLogout />} type='button' onClick={handleLogout}>
         Logout
-      </button>
+      </Button>
     </div>
   );
 }

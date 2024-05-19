@@ -1,9 +1,9 @@
 import { FaUser } from "react-icons/fa6";
 import { FaPhone } from "react-icons/fa6";
-
-
 import { useDispatch } from "react-redux";
 import { deleteContact } from "../../redux/contacts/oprations";
+import Button from '@mui/material/Button';
+import { MdDelete } from "react-icons/md";
 
 import css from "./Contact.module.css";
 
@@ -16,7 +16,9 @@ export default function Contact({ filteredContacts: { id, name, number } }) {
         <p className={css.contactItem}><FaUser /> {name}</p>
         <p className={css.contactItem}><FaPhone /> {number}</p>
       </div>
-      <button className={css.deleteBtn} type="button" onClick={handleDelete}>Delete</button>
+      <Button variant="outlined" startIcon={<MdDelete />} onClick={handleDelete}>
+        Delete
+      </Button>
     </li>
     
   );

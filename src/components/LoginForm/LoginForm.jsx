@@ -2,6 +2,9 @@ import { Formik, Form, Field } from "formik";
 import { useDispatch } from "react-redux";
 import { toast } from "react-hot-toast";
 import { logIn } from "../../redux/auth/operations";
+
+import Button from '@mui/material/Button';
+import { MdOutlineLogin } from "react-icons/md";
 import css from "./LoginForm.module.css";
 
 export default function LoginForm() {
@@ -11,10 +14,10 @@ export default function LoginForm() {
     dispatch(logIn(values))
       .unwrap()
       .then(reponse => {
-        toast.success("Success!!!");
+        toast.success("Welcome!!!");
       })
       .catch(error => {
-        console.log(error);
+        toast.error('Sorry! Something went wrong...');
       });
 
     actions.resetForm();
@@ -28,16 +31,19 @@ export default function LoginForm() {
       }}
       onSubmit={handleSubmit}
     >
-      <Form className={css.form} autoComplete="off">
-        <label className={css.label}>
-          Email
-          <Field type="email" name="email" />
-        </label>
-        <label className={css.label}>
-          Password
-          <Field type="password" name="password" />
-        </label>
-        <button type="submit">Log In</button>
+      <Form className={css.container} autoComplete="off">
+        <div className={css.inputContainer}>
+          <label >Email</label>
+          <Field className={css.inputValue} type="email" name="email" />
+        </div>
+        <div className={css.inputContainer}>
+          <label >Password</label>
+          <Field className={css.inputValue} type="password" name="password" />
+       </div>
+        
+        <Button variant="contained" endIcon={<MdOutlineLogin />} type='submit'>
+          Log in
+        </Button>
       </Form>
     </Formik>
   );

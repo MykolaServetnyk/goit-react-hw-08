@@ -1,9 +1,29 @@
-.form {
-    width: 320px;
-}
-
-.label {
+.container {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 14px;
     display: flex;
     flex-direction: column;
-    margin-bottom: 16px;
+    gap: 14px;
+    width: 360px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.inputContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputValue {
+    background-color: #ffffff;
+    color: #242424;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 6px 10px;
+}
+
+.error {
+    color: red;
+    font-size: 16px;
 }
