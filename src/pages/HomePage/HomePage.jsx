@@ -12,7 +12,7 @@ export default function HomePage() {
           💁‍♀️
         </span>
       </PageTitle>
-      <p>Create your first list of contacts with us</p>
+      <p>Create your list of contacts with us</p>
     </div>
   );
 }

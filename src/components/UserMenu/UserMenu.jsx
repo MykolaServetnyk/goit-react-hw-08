@@ -16,8 +16,9 @@ export default function UserMenu() {
   return (
     <div className={css.wrapper}>
       <p className={css.username}>Welcome, {user.name}</p>
-      <Button variant="contained" endIcon={<MdOutlineLogout />} type='button' onClick={handleLogout}>
-        Logout
+      <Button variant="contained" endIcon={<MdOutlineLogout />}
+        type='button' onClick={handleLogout}>
+        <span className={css.btnLogo}>Logout</span> 
       </Button>
     </div>
   );

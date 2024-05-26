@@ -6,6 +6,29 @@
     color: #2a363b;
 }
 
-.link.active {
+.link:active {
     color: #e84a5f;
+}
+
+@media screen and (max-width: 374px) {
+    .sp {
+        display: none;
+    }
+
+    .link {
+        padding: 0;
+        width: 67px;
+    }
+}
+
+@media screen and (min-width: 375px) {
+    .sp {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .sp {
+        display: inline;
+    }
 }

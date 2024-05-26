@@ -7,3 +7,16 @@
 .username {
     font-weight: 700;
 }
+
+@media screen and (max-width: 375px) {
+    .btnLogo {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .btnLogo {
+        font-size: smaller;
+    }
+}
