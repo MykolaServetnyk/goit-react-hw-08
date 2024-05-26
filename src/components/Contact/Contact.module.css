@@ -3,12 +3,13 @@
     padding: 8px 12px;
     border: 1px solid black;
     border-radius: 5px;
+    min-width: 300px;
 }
 
 .contactInfo {
     display: flex;
     flex-direction: column;
-    margin-right: 10px;
+    margin: 0 auto;
 }
 
 .contactItem {
